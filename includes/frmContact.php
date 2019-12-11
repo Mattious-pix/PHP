@@ -1,4 +1,4 @@
-<form action="index.php?page=contact" method="post">
+<form action="index.php?page=contact" method="POST">
   <fieldset>
     <legend>Donne-moi tes fesses</legend>
   <div>
@@ -6,19 +6,19 @@
     <input type="text" name="nom" id="nom" />
   </div>
   <div>
-    <label form="prénom">Prénom :</label>
-    <input type="text" name="nom" id="nom" />
+    <label form="prenom">Prénom :</label>
+    <input type="text" name="prenom" id="prenom" />
   </div>
   <div>
     <label form="mail">Email :</label>
-    <input type="mail" name="mail" id="mail"/>
+    <input type="text" name="mail" id="mail" />
   </div>
   <div>
     <label form="msg">Message :</label>
-    <textarea type="msg" id="mail"> </textarea>
+    <textarea type="text" name="msg" id="msg"> </textarea>
     </div>
   <div>
-    <input  type="submit" value="Envoyer" name"envoyer"/>
+    <input  type="submit" value="Envoyer" />
   </div>
   </fieldset>
     <input type="hidden" name="frmContact" />

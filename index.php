@@ -1,5 +1,6 @@
 <?php
-
+date_default_timezone_set('Europe/Paris');
+require_once './Function/checkInput.php';
 //echo "Hello Michel";
 
 // commentaire sur une ligne
