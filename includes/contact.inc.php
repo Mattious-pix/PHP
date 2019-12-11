@@ -1,11 +1,11 @@
 <h1>contact</h1>
 <?php
-if (isset($_POST['frmContact'])) {
-  echo"Je viens du formulaire";
+
+if(isset($_POST['envoyer'])) {
+  $nom = htmlspecialchars(addslashes(urldecode(trim($_POST['nom']))));
 }
 
 else{
-  echo "Je viens du futur;"
-}
 
-require 'frmContact.php';
+  require 'frmContact.php';
+}

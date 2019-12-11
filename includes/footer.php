@@ -7,3 +7,4 @@ $year = date('Y');
 
 </footer>
 </body>
+  </html>
