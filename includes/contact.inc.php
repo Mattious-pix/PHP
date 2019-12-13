@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 <h1>Pour nous contacter</h1>
 <?php
 if (isset($_POST['frmContact'])) {
+=======
+<h1>Nous contacter</h1>
+<?php
+
+if(isset($_POST['frmContact'])) {
+>>>>>>> 5065a9469fd0f96c78e0af878b12c0d2e1971835
   $nom = checkInput($_POST['nom']);
   $prenom = checkInput($_POST['prenom']);
   $mail = checkInput($_POST['mail']);
   $msg = checkInput($_POST['msg']);
+<<<<<<< HEAD
   $erreur = array();
   if ($nom === "")
     array_push($erreur, "Veuillez saisir votre nom");
@@ -99,5 +107,41 @@ if (isset($_POST['frmContact'])) {
 }
 else {
   $nom = $prenom = $mail = $msg = "";
+=======
+
+$erreur = array();
+
+if ($nom === "")
+  array_push($erreur, "Veuillez saisir votre nom");
+if ($prenom === "")
+  array_push($erreur, "Veuillez saisir votre prenom");
+if ($mail === "")
+  array_push($erreur, "Veuillez saisir votre mail");
+if ($msg === "")
+  array_push($erreur, "Veuillez saisir votre msg");
+
+if(count($erreur) > 0){
+  $message = '<ul>';
+
+for($i = 0 ; $i < count($erreur) ; $i++) {
+  $message .= '<li>';
+  $message .= $erreur[$i];
+  $message .= '</li>';
+
+}
+
+  $message .= '</ul>';
+
+  echo $message;
+
+>>>>>>> 5065a9469fd0f96c78e0af878b12c0d2e1971835
+  require 'frmContact.php';
+}
+
+else {
+  echo "insertion en BDD";
+}
+}
+else {
   require 'frmContact.php';
 }
